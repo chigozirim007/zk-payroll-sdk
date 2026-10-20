@@ -8,5 +8,6 @@ export * from "./auditAttestationDigest";
 export * from "./accessExpiry";
 export * from "./auditReferenceAttachment";
 export * from "./grantScope";
+export * from "./historicalPayrollAccessAuthorization";
 export * from "./auditRetentionSafeguards";
 export * from "./sequenceVerification";

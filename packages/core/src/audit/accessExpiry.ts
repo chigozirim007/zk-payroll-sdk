@@ -126,9 +126,7 @@ function resolveRetentionWindow(retentionWindowMs?: number): number {
     return DEFAULT_AUDIT_ACCESS_RETENTION_WINDOW_MS;
   }
   if (!Number.isFinite(retentionWindowMs) || retentionWindowMs < 0) {
-    throw new RangeError(
-      "retentionWindowMs must be a non-negative finite number of milliseconds"
-    );
+    throw new RangeError("retentionWindowMs must be a non-negative finite number of milliseconds");
   }
   return retentionWindowMs;
 }
@@ -177,7 +175,7 @@ export function getAuditorAccessExpiryStatus(
  */
 export function formatAuditorAccessExpiry(
   input: AuditorAccessExpiryInput
-]: AuditorAccessExpiryFormatted {
+): AuditorAccessExpiryFormatted {
   const expiresAtMs = parseTimestampMs(input.expiresAt);
   const now = resolveReferenceTime(input.referenceTime);
   const threshold = input.warningThresholdMs ?? DEFAULT_ACCESS_EXPIRING_SOON_THRESHOLD_MS;
